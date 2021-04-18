@@ -1,0 +1,21 @@
+div{
+    width: 50%;
+    height: 200px;
+    margin: auto;
+}
+div.div1{
+    background-color: aqua;
+}
+
+.div2{
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: green;
+}
+
+.div3{
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color:red;
+    box-sizing: border-box;
+}

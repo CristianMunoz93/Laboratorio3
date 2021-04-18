@@ -1,0 +1,16 @@
+h1{
+    color:darkblue;
+    font-size:30px;
+    text-align: center;
+}
+
+p{
+    text-align: left;
+    color: blue;
+    font-size:18px;
+    font-style: italic;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: thin;
+    border-color: blue;
+}

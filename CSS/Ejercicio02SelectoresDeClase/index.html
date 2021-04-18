@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores de Clase</title>
+    <style>
+        p{
+            margin-bottom: 40px;
+        }
+
+        .claseDestacado{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        p.claseAcotacion{
+            text-align:center;
+            font-size:18px;
+            color:blue;
+            font-style: italic;
+            border-style:solid;
+            border-width:thin;
+            border-color:blue;
+        }
+
+        .claseAyuda{
+            color:tan;
+            border-color: yellow;
+            border:solid;
+            width: 50%;
+        }
+
+        .claseContenidoComun{
+            font-size: 14px;
+        }
+
+        p#idUnico{
+            color: red;
+            border-color: red;
+            border:solid;
+            width: 20%;
+            font-style: italic;
+        }
+
+        .imagenAl50{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <p>Este párrafo contiene un grupo de palabras delimitado por una etiqueta "span". El comienzo es aquí: <span class="claseDestacado">grupo de palabras destacadas con el estilo de claseDestacado</span></p>
+    <p class="claseAcotacion">Este párafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAcotacion" sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+    <p class="claseDestacado">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseDestacado"</p>
+    <p class="claseAyuda">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="claseAyuda"</p>
+    <p class="claseContenidoComun">Este párrafo toma el estilo definido en la etiqueta style en el header del documento como class="contenidoComun"</p>
+    <p id="idUnico"> Párrafo formateado por un estilo particular definido en el style del documento para un párrafo específico id="idUnico"</p>
+
+    <h1>Todas las imagenes con class="imagenAl50" en esta página se encuentran limitadas al 50% del ancho del viewport más allá de su tamaño real en pixeles</h1>
+    <img src="chichen-itza.jpg" class="imagenAl50">
+</body>
+</html>
