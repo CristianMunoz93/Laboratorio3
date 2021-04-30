@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Divs En Fila</title>
+        <style>
+            
+            #divContenedor{
+                width: 80%; /*ancho con respecto al viewport*/
+                background-color:skyblue;
+                margin: auto;
+                padding: 1px;
+            }
+
+            .divInterior{
+                border-radius: 20px;
+                width: 300px;
+                height: 100px;
+                border: solid;
+                box-shadow: 16px 8px 2px rgba(0,0,0,0.3);
+                margin:10px;
+            }
+
+            #div1{
+                background: linear-gradient(180deg,orange, white, pink);
+                font-size: 2em;
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #div2{
+                background: radial-gradient(ellipse,orange,white,pink);
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #div3{
+                background: linear-gradient(180deg,orange, white, pink);
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+            }
+
+            #div4{
+                background: radial-gradient(ellipse,orange,white,pink);
+                float: left;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #div5{
+                background: linear-gradient(180deg,orange, white, pink);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2em;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div id="divContenedor">
+            <div id="div1" class="divInterior">Texto en DIV1</div>
+            <div id="div2" class="divInterior">Texto en DIV2</div>
+            <div id="div3" class="divInterior">Texto en DIV3</div>
+            <div id="div4" class="divInterior">Texto en DIV4</div>
+            <div id="div5" class="divInterior">Texto en DIV5</div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Divs Internos Absolutos</title>
+        <style>
+            *{
+                margin:0;
+                padding: 0;
+                margin: auto;
+                box-sizing:border-box;
+            }
+
+            .divContenedor{
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                background-color: deepskyblue;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+
+            .contenedor1{
+                position: absolute;
+                background-color:greenyellow;
+                width: 20%;
+                height: 40%;
+                top: 30%;
+                overflow: auto;
+                font-size: 1vw;
+            }
+
+            .contenedor2{
+                position: absolute;
+                background-color: red;
+                width: 50%;
+                height: 45%;
+                top:50%;
+                left:50%;
+                overflow: auto;
+                font-size: 1vw;
+            }
+
+            .contenedor3{
+                position: absolute;
+                background-color: gray;
+                opacity: 0.5;
+                width: 35%;
+                height: 50%;
+                top:20%;
+                left: 40%;
+                overflow: auto;
+                font-size: 1vw;
+            }
+            
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            
+            .divImagenes{
+                display: flex;
+                float: left;
+                margin-right:1%;
+                margin-bottom: 3%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="divContenedor">
+            <h1>Estructura de posicionamiento absoluto pero adaptable a la resolución de pantalla.</h1>
+            <div class="contenedor1">
+                <h1>Contenedor interno 1</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae distinctio laboriosam accusamus ut, adipisci quam,</p>
+            </div>
+            <div class="contenedor2">
+                <h1>Contenedor interno 2</h1>
+                <div class="divImagenes">
+                    <img src="amanecer-playa.jpg">
+                </div>
+                <div class="divImagenes">
+                    <img src="amanecer-playa.jpg">
+                </div>
+                <div class="divImagenes">
+                    <img src="amanecer-playa.jpg">
+                </div>
+            </div>
+            <div class="contenedor3">
+                <h1>Contenedor interno 3</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae distinctio laboriosam accusamus ut, adipisci quam,</p>
+            </div>
+        </div>
+    </body>
+</html>

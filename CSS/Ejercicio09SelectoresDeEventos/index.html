@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Selectores de Evento</title>
+        <style>
+            
+            *{
+                margin:auto;
+                padding: 0px;
+                box-sizing: border-box;
+                overflow: auto;
+            }
+            
+            #divContenedor{
+                width: 90%;
+                height: 100%;
+                background-color:skyblue;
+            }
+
+            button{
+                border: solid;
+                margin: 0;
+                height: 50px;
+                width: 80px;
+            }
+
+            
+            .divBotones{
+                display: flex;
+                float: left;
+            }
+
+            button:hover{
+                background-color: dodgerblue;
+                color: floralwhite;
+            }
+
+            button:active{
+                background-color: red;
+            }
+
+            .divInputs{
+                width: 30%;
+                clear: both;
+                margin-top: 5%;
+                margin-left: 0;
+                margin-bottom: 5%;
+            }
+
+            input{
+                width: 150px;
+                display: block;
+                margin-left: 0;
+            }
+
+            input:focus{
+                background-color: darkgreen;
+            }
+            
+            .divImagenes{
+                width: 200px;
+                height: 200px;
+                border: solid;
+                margin-left: 0%;
+                display: flex;
+                float: left;
+                margin-bottom: 5%;
+            }
+
+            .divImagenes:active{
+                width: 25%;
+                height: 25%;
+            }
+
+            img{
+                max-height: 100%;
+                max-width: 100%;
+                margin-left: 0%;
+                margin-top: 0%;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="divContenedor">
+            <div class="divBotones">
+                <form action="respuestaFormulario1.html" target="_blank" method="GET">
+                    <button type="submit">Opción 1</button>
+                </form>
+            </div>
+
+            <div class="divBotones">
+                <form action="respuestaFormulario2.html" target="_blank" method="GET">
+                    <button type="submit">Opción 2</button>
+                </form>
+            </div>
+            
+            
+            <div class="divBotones">
+                <form action="respuestaFormulario3.html" target="_blank" method="GET">
+                    <button type="submit">Opción 3</button>
+                </form>
+            </div>
+
+            <div class="divInputs">
+                <label>Apellido:</label>
+                <input type="text">
+                <label>Nombre:</label>
+                <input type="text">
+            </div>
+            
+            <div >
+                <div class="divImagenes">
+                    <img src="amanecer-playa.jpg">
+                </div>
+                <div class="divImagenes">
+                    <img src="aurora-boreal.jpg">
+                </div>
+                <div class="divImagenes">
+                    <img src="hidden-beach-marieta-islands-8.jpg">
+                </div>
+                <div class="divImagenes">
+                    <img src="montaña.jpg">
+                </div>
+            </div>
+            <div class="botonVolver">
+                <button type="button">
+                    <a href="../index.html">Volver</a>
+                </button>
+                
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

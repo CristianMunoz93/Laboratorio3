@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Divs Internos en Columnas</title>
+        <style>
+            
+            *{
+                box-sizing: border-box;
+                margin: auto;
+                overflow: auto;
+                padding: 0;
+            }
+
+            #divContenedor{
+                width: 80%;
+                height: 100%;
+                background-color: burlywood;
+            }
+
+            .divInterior{
+                width: 30%;
+                height: 30%;
+                background-color: cadetblue;
+            }
+
+            
+            img{
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            #div1{
+                height: 100%;
+                padding:8%;
+                margin:1%;
+                display:block;
+                float: left;
+            }
+
+            #div2{
+                padding:8%;
+                margin:1%;
+                display: flex;
+                float: left;
+            }
+
+            #div3{
+                padding:8%;
+                margin:1%;
+                display: flex;
+                float: left;
+            }
+
+            #div4{
+                padding:8%;
+                margin:1%;
+                display: flex;
+                float: left;
+            }
+
+            #div5{
+                padding:8%;
+                margin:1%;
+                display: flex;
+                float: left;
+            }
+            
+            #div6{
+                padding:8%;
+                margin:1%;
+                display: block;
+                float: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="divContenedor">
+            <h1>Encolumnado sin tablas</h1>
+            <div id="div1" class="divInterior">
+                <p>1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore minus id, ullam earum rerum recusandae voluptate cumque corrupti dicta laudantium quis autem doloremque fugit. At architecto itaque deserunt doloremque ipsum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores nobis eum illum suscipit ad ut reiciendis architecto soluta nihil quia similique est nostrum minus provident adipisci reprehenderit sint, deleniti consequatur. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia officia, est magnam eligendi omnis dolorem sapiente consequuntur explicabo? Quae dignissimos neque possimus expedita libero, nobis nulla quasi. Iste, ducimus nemo! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum earum animi ipsa pariatur blanditiis quasi odio voluptatibus temporibus enim! Magnam nisi ullam doloremque tempore sapiente autem blanditiis nam, suscipit voluptatum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quaerat amet illo ab et fugiat, sint nesciunt hic optio cum nisi perferendis doloremque nihil repellendus blanditiis dolorum sequi iste maxime? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <img src="beagle.jpg">
+            </div>
+            <div id="div2" class="divInterior">
+                <p>2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero beatae omnis facilis quam nihil! Assumenda eligendi vel, cum vero nostrum adipisci, aspernatur explicabo sunt ea blanditiis, eaque sint minus laboriosam?</p>
+            </div>
+            <div id="div3" class="divInterior">
+                <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, fugit, quas nostrum asperiores illo quos molestiae unde ea, explicabo aliquam et quis totam cupiditate corrupti? Voluptate ad ratione sit ipsamsssssssssss</p>
+            </div>
+            <div id="div4" class="divInterior">
+                <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex harum officiis dolorum porro iste. Id quae sint maiores perspiciatis dignissimos. Ipsam, nobis non nihil deserunt eligendi voluptate enim pariatur ipsa!sssss</p>
+            </div>
+            <div id="div5" class="divInterior">
+                <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex harum officiis dolorum porro iste. Id quae sint maiores perspiciatis dignissimos. Ipsam, nobis non nihil deserunt eligendi voluptate enim pariatur ipsa!sssss</p>
+            </div>
+            <div id="div6" class="divInterior">
+                <p>6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam saepe cupiditate eum architecto quo, laboriosam, animi aperiam dolore amet facere quae quidem perspiciatis neque quod porro obcaecati quia qui......</p>
+                <img src="beagle.jpg">
+            </div>
+        </div>
+    </body>
+</html>
