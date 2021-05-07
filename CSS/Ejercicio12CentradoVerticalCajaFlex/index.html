@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Centrado Vertical Caja Flex</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+            }
+
+
+            .divContenedor{
+                width: 90%;
+                height: 100%;
+                background-color: burlywood;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+
+            img{
+                width: 400px;
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="divContenedor">
+            <div class="divImagenes">
+                <img src="aurora-boreal.jpg">
+            </div>
+            <div class="divImagenes">
+                <img src="aurora-boreal.jpg">
+            </div>
+            <div class="divImagenes">
+                <img src="aurora-boreal.jpg">
+            </div>
+        </div>    
+    </body>
+</html>

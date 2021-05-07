@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout Basico</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            .divContenedor{
+                width: 90%;
+                height: 100%;
+                margin:auto;
+            }
+
+            .divHeader{
+                width: 100%;
+                height: 33%;
+                background-color: gray;
+            }
+
+            .divPrincipal{
+                width: 100%;
+                height: 33%;
+            }
+
+            .divFooter{
+                clear: both;
+                width: 100%;
+                height: 33%;
+                background-color: grey;
+            }
+
+            .divNav{
+                height: 100%;
+                width: 10%;
+                float: left;
+                background-color: indianred;
+            }
+
+            .divNav h2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .divMain{
+                height: 100%;
+                width: 90%;
+                overflow-y: auto;
+                background-color: white;
+            }
+            
+            
+            .divPrincipal ul li{
+                display: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                background-color:lightslategray;
+                color: black;
+            }
+
+            .divPrincipal a{
+                text-decoration: none;
+            }
+
+
+
+            .divPrincipal ul li:hover{
+                background-color:blanchedalmond;
+            }
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="divContenedor">
+            <div class="divHeader">
+                <header>
+                    <h1>Titulo principal de la pagina 1</h1>
+                </header>
+            </div>
+            <div class="divPrincipal">
+                <div class="divNav">
+                    <nav>
+                        <h2>Menu</h2>
+                        <ul>
+                            <li>
+                                <a href="/HTML/index.html">HTML</a>
+                            </li>
+                            <li>
+                                <a href="../index.html">CSS</a>
+                            </li>
+                            <li>
+                                <a>JSCRIPT</a>
+                            </li>
+                            <li>
+                                <a>PHP</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="divMain">
+                    <main>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        <p>El contenido puede crecer indefinidamente agrandando el div</p>
+                        
+                    </main>
+                </div>
+            </div>
+            
+            <div class="divFooter">
+                <footer>
+                    <h1>Pie de página</h1>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

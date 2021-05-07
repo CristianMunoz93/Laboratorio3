@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu</title>
+        <style>
+            
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #menu ul{
+                list-style: none;
+            }
+
+            #menu ul li {
+                background-color:dodgerblue;
+                color: white;
+            }
+
+            #menu ul a {
+                display:block;
+                text-decoration:none;
+            }
+
+            #menu ul li {
+                position:relative;
+                float:left;
+                padding: 1%;
+                text-align: center;
+            }
+
+            /*La lista desplegable*/
+            #menu ul ul {
+                display:none;
+                position:absolute;
+                top:100%;
+                left:0%;
+            }
+
+            /* items del menu desplegable*/
+            #menu ul ul li {
+                float:none;
+                width: 200px;
+            }
+
+            #menu ul ul li a {
+                text-align: left;
+                color: white;
+            }
+            
+            #menu ul ul a {
+                padding: 3%;
+            }
+            
+            /* items del menu desplegable al pasar el ratón*/
+            #menu ul li:hover ul {
+                display:block;
+            }
+
+            #menu ul li:hover{
+                background-color:lightslategray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav id="menu">
+            <ul>
+                <li>HTML
+                    <ul>
+                        <li>
+                            <a href="/HTML/Ejercicio02Tablas/index.html">Tablas</a>
+                        </li>
+                        <li>
+                            <a href="/HTML/Ejercicio03Formularios/index.html">Formularios</a>
+                        </li>
+                        <li>
+                            <a href="/HTML/Ejercicio05Iframes/index.html">Iframes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>CSS
+                    <ul>
+                        <li>
+                            <a href="../Ejercicio06DivsEnPila/index.html">Divs en pila</a>
+                        </li>
+                        <li>
+                            <a href="../Ejercicio07DivsEnFila/index.html">Divs en fila</a>
+                        </li>
+                        <li>
+                            <a href="../Ejercicio08DivsInternosEnColumnas/index.html">Divs Internos en columnas</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>JSCRIPT</li>
+                <li>ESPECIALES</li>
+                <li>PHP</li>
+            </ul>
+        </nav>        
+    </body>
+</html>

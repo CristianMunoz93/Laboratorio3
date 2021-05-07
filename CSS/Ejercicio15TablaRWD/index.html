@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabla RWD</title>
+        <style>
+            
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+                background-color:rgb(0, 82, 82);
+            }
+            
+            table{
+                border: solid;
+                width: 100%;
+                height: 10%;
+                
+            }
+
+            thead{
+                background-color: green;
+            }
+            
+            tbody{
+                width: 100%;
+                overflow: auto;
+            }
+
+
+            [campo-dato ='Id']{
+                width: 5%;
+            }
+
+            [campo-dato ='Nick'],[campo-dato ='Twitter'],[campo-dato ='Skype']{
+                width: 15%;
+            }
+
+            [campo-dato ='Mail'],[campo-dato ='Web']{
+                width: 25%;
+            }
+
+
+
+            
+
+            @media (max-width:1200px){
+                [campo-dato ='Skype']{
+                    display:none;
+                }
+            }
+
+            tbody tr:nth-child(odd){
+                background:rgba(0,0,0,.2);
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th campo-dato ='Id'>ID</th>
+                    <th campo-dato ='Nick'>Nick</th>
+                    <th campo-dato ='Mail'>MAIL</th>
+                    <th campo-dato ='Web'>WEB</th>
+                    <th campo-dato ='Twitter'>TWITTER</th>
+                    <th campo-dato ='Skype'>Skype</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td campo-dato ='Id'>1</td>
+                    <td campo-dato ='Nick'>Fu</td>
+                    <td campo-dato ='Mail'>fulano@gmail.com</td>
+                    <td campo-dato ='Web'>http://fulano.ar</td>
+                    <td campo-dato ='Twitter'>@fulano</td>
+                    <td campo-dato ='Skype'>fulano@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>2</td>
+                    <td campo-dato ='Nick'>Menga</td>
+                    <td campo-dato ='Mail'>mengano@gmail.com</td>
+                    <td campo-dato ='Web'>http://mengano.ar</td>
+                    <td campo-dato ='Twitter'>@mengano</td>
+                    <td campo-dato ='Skype'>mengano@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>3</td>
+                    <td campo-dato ='Nick'>Zulti</td>
+                    <td campo-dato ='Mail'>zultano@gmail.com</td>
+                    <td campo-dato ='Web'>http://zultano.ar</td>
+                    <td campo-dato ='Twitter'>@zultano</td>
+                    <td campo-dato ='Skype'>zultano@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Pepe</td>
+                    <td campo-dato ='Mail'>pepe@gmail.com</td>
+                    <td campo-dato ='Web'>http://pepe.ar</td>
+                    <td campo-dato ='Twitter'>@pepe</td>
+                    <td campo-dato ='Skype'>pepe@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+                <tr>
+                    <td campo-dato ='Id'>4</td>
+                    <td campo-dato ='Nick'>Juan</td>
+                    <td campo-dato ='Mail'>juan@gmail.com</td>
+                    <td campo-dato ='Web'>http://juan.ar</td>
+                    <td campo-dato ='Twitter'>@juan</td>
+                    <td campo-dato ='Skype'>juan@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

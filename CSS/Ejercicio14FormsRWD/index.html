@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms RWD</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+            }
+
+            .divContenedor{
+                height: 100%;
+            }
+
+            .divHeader{
+                background-color: darkcyan;
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .divFooter{
+                height: 10%;
+                background-color: darkcyan;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            label {
+                display:block;
+            }
+            
+            .barraControl{
+                display: block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 10%;
+                width: 100%;
+                background-color: gray;
+            }
+
+            .boton{
+                width:10%;
+                height: 80%;
+                background-color:#AAAAAA;
+                cursor:pointer;
+                justify-content: center;
+            }
+
+            form {
+                height:80%;
+                width:100%;
+                overflow:auto;
+                background-color: gray;
+            }
+
+            .entrada{
+                text-align:left;
+                height:30%;
+                float:left;
+                border-style:solid;
+                border-color:black;
+                border-width:1px;
+                padding:1%;
+            }
+
+            @media (min-width:900px){
+                .entrada {
+                    width:20%;
+                }
+            }
+
+            @media (min-width:700px) and (max-width:900px){
+                .entrada {
+                    width:25%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="divContenedor">
+            <div class="divHeader">
+                <h1>Formulario</h1>
+            </div>
+            <form action="respuestaFormulario.html" target="_blank" method="GET">
+                <div class="entrada">
+                    <label>Apellido</label>
+                    <input type="text" id="apellido">
+                </div>
+
+                <div class="entrada">
+                    <label>Nombre</label>
+                    <input type="text" id="nombre">
+                </div>
+
+                <div class="entrada">
+                    <label>Contraseña</label>
+                    <input type="password" id="password">
+                </div>
+
+                <div class="entrada">
+                    <label>Campo deshabilitado</label>
+                    <input type="text" id="campoDeshabilitado" value="valorDeshabilitado" disabled>
+                </div>
+
+                <div class="entrada">
+                    <label>Fecha</label>
+                    <input type="date" id="fecha">
+                </div>
+
+                <div class="entrada">
+                    <label>DNI</label>
+                    <input type="text" id="dni">
+                </div>
+
+                <div class="entrada">
+                    <label>Actividades extracurriculares</label>
+                    
+                    <label>Musica:</label>
+                    <input type="checkbox" id="musica" name="musica" value="aceptado" />
+                    
+                    <label>Pintura artistica:</label>
+                    <input type="checkbox" id="pintura" name="pintura" value="aceptado" />
+
+                    <label>Deportes:</label>
+                    <input type="checkbox" id="deporte" name="deporte" value="aceptado" />
+
+                    <label>Teatro:</label>
+                    <input type="checkbox" id="deporte" name="deporte" value="aceptado" />
+                </div>
+
+                <div class="entrada">
+                    <label>Sexo</label>
+                    
+                    <label>Masculino</label>
+                    <input type="radio" id="masculino" name="sexo" value="m" checked="checked" />
+                    <label>Femenino</label>
+                    <input type="radio" id="femenino" name="sexo" value="f" />
+                </div>
+
+                <div class="entrada">
+                    <label>Vacio</label>
+                </div>
+
+                <div class="entrada">
+                    <label>Estudios cursados</label>
+                    <select id="estudios" name="estudios">
+                        <option value="pri" selected="selected">Primarios</option>
+                        <option value="sec">Secundarios</option>
+                        <option value="ter">Terciarios</option>
+                        <option value="univ">Universitarios</option>
+                        <option value="post">Postgrado</option>
+                    </select>
+                </div>
+
+                <div class="entrada">
+                    <label>Area desempeño</label>
+                    <select id="area" name="area">
+                        <option value="adm" selected="selected">Administracion</option>
+                        <option value="rrhh">RRHH</option>
+                        <option value="tec">Tecnologia</option>
+                    </select>
+                </div>
+
+                <div class="entrada">
+                    <label>Turno</label>
+                    <select id="turno" name="turno">
+                        <option value="mañana" selected="selected">Mañana</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noche">Noche</option>
+                    </select>
+                </div>
+
+                <div class="entrada">
+                    <label>Conduce</label>
+                    
+                    <label>Si</label>
+                    <input type="radio" id="si" name="conduce" value="s" checked="checked" />
+                    <label>No</label>
+                    <input type="radio" id="no" name="conduce" value="n" />
+                </div>
+
+                <div class="barraControl">
+                    <button class="boton" type="submit">Enviar</button>
+                    <button class="boton" type="reset">Reset</button>
+                </div>
+            </form>
+            <div class="divFooter">
+                <h3>Pie de formulario</h3>
+            </div>
+        </div>
+    </body>
+</html>
