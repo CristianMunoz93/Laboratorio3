@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alcance</title>
+    </head>
+    <body>
+        <button id="incorrecta">Inicialización incorrecta</button>
+        <button id="correcta">Inicialización correcta</button>
+        <button id="mostrarValor">Mostrar variable global</button>
+        <script>
+            var variableGlobal;
+
+
+            document.getElementById("incorrecta").onclick=function(){
+                var variableGlobal= prompt ("Ingrese valor para la variable global");
+                alert("El valor de la variable local ingresada es:" +variableGlobal);
+                alert("El tipo de la variable local ingresada es:"+typeof variableGlobal);
+            }
+
+            document.getElementById("correcta").onclick=function(){
+                variableGlobal = prompt ("Ingrese valor para la variable global");
+                alert("El valor de la variableGlobal ingresada es:" +variableGlobal);
+                alert("El tipo de la variableGlobal ingresada es:"+typeof variableGlobal);
+            }
+
+            document.getElementById("mostrarValor").onclick = function() {
+                if (variableGlobal==null){
+                    alert("Variable global no ha sigo asignada");
+                }else{
+                    alert("El valor de la variableGlobal ingresada es:" +variableGlobal);
+                    alert("El tipo de la variableGlobal ingresada es:"+typeof variableGlobal);
+                }
+                
+            }
+
+        </script>
+    </body>
+</html>

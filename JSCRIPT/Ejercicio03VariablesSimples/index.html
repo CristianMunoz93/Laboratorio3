@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variables Simples</title>
+    </head>
+    <body>
+        <h1>Carga de variables globales</h1>
+        <script>
+            var z;
+            var a=1;
+            var b="1";
+            var c=2;
+
+            //TENER EN CUENTA QUE CUALQUIER DATO INGRESADO POR INPUT ES UNA VARIABLE STRING
+            var d = prompt ("Ingrese un valor para esta variable");
+            
+            //Muestra variable Z
+            document.write("<h2>variable <span color:blue '>z</span> inicializada desde programa : "+ z+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>z</span>:"+ typeof z+"</h2>");
+            
+            //Muestra variable A
+            document.write("<h2>variable <span color:blue '>a</span> inicializada desde programa : "+ a+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>a</span>:"+ typeof a+"</h2>");
+
+            //Muestra variable B
+            document.write("<h2>variable <span color:blue '>b</span> inicializada desde programa : "+ b+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>b</span>:"+ typeof b+"</h2>");
+
+            //Muestra variable C
+            document.write("<h2>variable <span color:blue '>c</span> inicializada desde programa : "+ c+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>c</span>:"+ typeof c+"</h2>");
+
+            //Muestra concatenación de variable A(number) + variable B(string)
+            document.write("<h2><span style=' color:blue '>a+b</span>:"+a+b+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>a+b</span>:"+ typeof (a+b)+"</h2>");
+
+            //Muestra suma de variable A(number) + variable C(number)
+            document.write("<h2><span style=' color:blue '>a+c</span>:"+ parseInt(a + c)+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>a+c</span>:"+ typeof (a+c)+"</h2>");
+
+            document.write("<h2>La variable <span style=' color:blue '>d</span> cargada desde teclado:"+d+"</h2>");
+            document.write("<h2>tipo de <span style=' color:blue '>d</span>:"+ typeof d+"</h2>");
+            
+        </script>
+    </body>
+</html>

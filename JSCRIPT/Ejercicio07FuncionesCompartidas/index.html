@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funciones Compartidas</title>
+        <style>
+
+            *{
+                margin:0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+                padding-top: 1%;
+            }
+            
+            #divContenedor{
+                background-color: grey;
+                width: 80%;
+                height: 80%;
+                margin: auto;
+                padding-top: 5%;
+            }
+
+            #divBotonera{
+                background-color: cornflowerblue;
+                height: 40%;
+                width: 80%;
+                margin: auto;
+            }
+
+            #divFunciones{
+                background-color: darkkhaki;
+                height: 40%;
+                width: 80%;
+                margin: auto;
+                text-align: center;
+                padding-top: 1%;
+            }
+
+            .botonesNumeros{
+                width: 90%;
+                height: 50%;
+            }
+
+            .botonesFunciones{
+                height: 30%;
+                width: 40%;
+            }
+
+            input{
+                text-align: right;
+                width: 100%;
+                height: 15%;
+                font-size: 2rem;
+            }
+
+            table{
+                height: 85%;
+                width: 80%;
+                margin: auto;
+                border-collapse: collapse;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div id="divContenedor">
+            <div id="divBotonera">
+                <input type="text" id="display">
+                <table>
+                    <tr>
+                        <td>
+                            <button class="botonesNumeros" id="num1" value="1">1</button>        
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num2" value="2">2</button>
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num3" value="3">3</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="botonesNumeros" id="num4" value="4">4</button>        
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num5" value="5">5</button>
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num6" value="6">6</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="botonesNumeros" id="num7" value="7">7</button>        
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num8" value="8">8</button>
+                        </td>
+                        <td>
+                            <button class="botonesNumeros" id="num9" value="9">9</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="divFunciones">
+                <button class="botonesFunciones" id="sumar">+</button>
+                <button class="botonesFunciones" id="mostrarAcumulador">Muestra Acumulador</button>
+                <button class="botonesFunciones" id="borrarAcumulador">Borra Acumulador</button>
+                <button class="botonesFunciones" id="borrarDisplay">Borra Display</button>
+            </div>
+        </div>
+        
+        <script>
+            var acum=0;
+
+            //BOTONES NUMERICOS
+            document.getElementById("num1").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num1").value;
+            }
+
+            document.getElementById("num2").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num2").value;
+            }
+
+            document.getElementById("num3").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num3").value;
+            }
+
+            document.getElementById("num4").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num4").value;
+            }
+
+            document.getElementById("num5").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num5").value;
+            }
+
+            document.getElementById("num6").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num6").value;
+            }
+
+            document.getElementById("num7").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num7").value;
+            }
+
+            document.getElementById("num8").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num8").value;
+            }
+
+            document.getElementById("num9").onclick = function(){
+                document.getElementById("display").value= document.getElementById("display").value + document.getElementById("num9").value;
+            }
+
+            //Boton BORRAR DISPLAY
+            document.getElementById("borrarDisplay").onclick = function(){
+                document.getElementById("display").value= null;
+            }
+
+            //Boton SUMAR
+            document.getElementById("sumar").onclick = function(){
+                acum = acum + parseInt(document.getElementById("display").value);
+                document.getElementById("display").value= null;
+            }
+
+            //Boton MOSTRAR ACUMULADOR
+            document.getElementById("mostrarAcumulador").onclick = function(){
+               alert(acum);
+            }
+
+            //Boton BORRAR ACUMULADOR
+            document.getElementById("borrarAcumulador").onclick = function(){
+               acum=0;
+            }
+
+        </script>
+    </body>
+</html>
