@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creacion Objetos</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+            }
+
+            #divContenedor{
+                background-color: burlywood;
+                margin:auto;
+                width:70%;
+                overflow-y: auto;
+                height: 50%;
+                margin-top: 10%;
+                padding-left: 1%;
+                padding-top: 1%;
+            }
+
+            .claseObjetoDinamico{
+                border: solid;
+                width: 50%;
+                background-color: cornflowerblue;
+                border-width: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="crear">Crear</button>
+        <button id="limpiar">Limpiar</button>
+        <button id="info">Info</button>
+        <div id="divContenedor">
+            
+        </div>
+        <script>
+            document.getElementById("divContenedor").removeChild(document.getElementById("divContenedor").childNodes[0]);
+
+            document.getElementById("crear").onclick=function(){
+                var objDiv = document.createElement("div");
+                var textoHtml = "<h1>Elemento creado:";
+
+                textoHtml = textoHtml + document.getElementById("divContenedor").childNodes.length;
+                textoHtml = textoHtml + "</h1>";
+                
+                objDiv.innerHTML = textoHtml;
+                objDiv.className="claseObjetoDinamico";
+                document.getElementById("divContenedor").appendChild(objDiv);
+            }
+            
+            document.getElementById("limpiar").onclick=function(){
+                while(document.getElementById("divContenedor").childNodes.length > 0){
+                    document.getElementById("divContenedor").removeChild(document.getElementById("divContenedor").childNodes[0]);
+                }
+            }
+
+            document.getElementById("info").onclick=function(){
+                
+                console.log(document.getElementById("divContenedor").childNodes.length);
+                if(document.getElementById("divContenedor").childNodes.length > 0){
+                    
+                    alert("Longitud del childNodes es:" + document.getElementById("divContenedor").childNodes.length);
+                    
+                    console.log("Indice:" + document.getElementById("divContenedor").childNodes.item);
+                    
+                }
+                
+            }
+        </script>
+    </body>
+</html>

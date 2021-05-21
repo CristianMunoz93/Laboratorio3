@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variables Objeto Dato</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+            }
+
+            #divAdicionar{
+                background-color: cadetblue;
+                width: 90%;
+                margin: auto;
+            }
+
+            input{
+                display: block;
+            }
+
+            #adicionar{
+                margin-top: 1%;
+            }
+
+            #divControl{
+                background-color:darkkhaki;
+                width: 90%;
+                margin: auto;
+                margin-top: 3%;
+            }
+
+            td{
+                border: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divAdicionar">
+            <h1>Adicionar persona</h1>
+            <label>Nombre:</label>
+            <input type="text" id="nombre">
+            <label>Apellido:</label>
+            <input type="text" id="apellido">
+            <label>Fecha de nacimiento:</label>
+            <input type="text" id="fecNac">
+            <button id="crear">Crear persona</button>
+        </div>
+        <div id="divControl">
+            <h1>Control</h1>
+            <button id="mostrar">Lista personas</button>
+            <button id="ocultar">Oculta presentación</button>
+        </div>
+
+        <div id="presentacion">
+
+        </div>
+
+        <script>
+            var objetoPersona={};
+            var objetoPersona={nombre:"Juan",apellido:"Perez",fechaNac:"01/01/0001"};
+
+            var arregloPersonas =[objetoPersona];
+
+            
+            arregloPersonas.push({nombre:"Pepe",apellido:"Gonzalez",fechaNac:"09/09/9999"});
+
+            var objetoPersonas = { personas : arregloPersonas };
+
+            
+            document.getElementById("crear").onclick=function(){
+                var auxNom = document.getElementById("nombre").value;
+                var auxApe = document.getElementById("apellido").value;
+                var auxFecNac = document.getElementById("fecNac").value;
+
+                
+            }
+            
+            document.getElementById("mostrar").onclick=function(){
+                var texto ="<h1> Presentacion </h1>";
+                texto= texto + "<table style='border-collapse:collapse;border:solid'>";
+                
+                objetoPersonas.personas.forEach(function(item,indice){
+                    texto = texto + "<tr>";
+                    texto = texto + "<td>" + item.nombre + "</td>";
+                    texto = texto + "<td>" + item.apellido + "</td>";
+                    texto = texto + "<td>" + item.fechaNac + "</td>";
+                    texto = texto + "</tr>";
+                });
+                texto= texto + "</table>";
+                texto= texto + "<h4> Longitud del arreglo de objetos: </h4>" + arregloPersonas.length;
+                document.getElementById("presentacion").style.display ="block";
+                document.getElementById("presentacion").innerHTML = texto;
+                
+            }
+
+            document.getElementById("ocultar").onclick=function(){
+                document.getElementById("presentacion").style.display ="none";
+            }
+
+        </script>
+    </body>
+</html>

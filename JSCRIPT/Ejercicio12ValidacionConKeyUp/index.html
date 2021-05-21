@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validacion con KeyUp</title>
+        <style>
+
+            *{
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+            }
+
+            #divContenedor{
+                background-color: cadetblue;
+                width: 70%;
+                margin: auto;
+                margin-top: 2%;
+            }
+
+            #datosEntrada{
+                padding-top: 1%;
+                padding-left: 1%;
+            }
+
+            input{
+                display: block;
+                width: 10%;
+            }
+
+            button{
+                width: 30%;
+                margin-left: 10%;
+                margin-top:5%;
+                margin-bottom:5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divContenedor">
+            <form>
+                <div id="datosEntrada">
+                    <label>Ingrese el día del mes:</label>
+                    <input type="number" min="1" max="31" id="dia" name="dia" required>
+                    <label>Ingrese el mes:</label>
+                    <input type="number" min="1" max="12" id="mes" name="mes" required>
+                </div>
+                
+                <button type="submit">Enviar</button>
+                <button type="reset">Reset</button>
+            </form>
+            
+        </div>
+        
+        <script>
+            document.getElementById("dia").onkeyup=function(){
+                if(document.getElementById("dia").value <1 || document.getElementById("dia").value >31){
+                    alert("El valor debe ser entre 1 y 31");
+                }
+            }
+
+            document.getElementById("mes").onkeyup=function(){
+                if(document.getElementById("mes").value <1 || document.getElementById("mes").value >12){
+                    alert("El valor debe ser entre 1 y 12");
+                }
+            }
+        </script>
+    </body>
+</html>

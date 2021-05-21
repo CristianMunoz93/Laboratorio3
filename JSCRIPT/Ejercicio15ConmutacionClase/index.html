@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conmutacion Clase</title>
+        <style>
+            ul{
+                width:30%;
+                height: 40%;
+            }
+
+            .claseLista1{
+                background-color: chartreuse;
+                border: solid;
+                list-style-type: upper-roman;
+            }
+
+            .claseLista2{
+                background-color:crimson;
+                border: solid;
+                list-style-type:lower-alpha;
+            }
+
+            .claseLista3{
+                background-color:cyan;
+                border: solid;
+                list-style-type:circle;
+            }
+
+            .claseLista4{
+                background-color:darksalmon;
+                border: solid;
+                list-style-type:armenian;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="miLista">
+            <h1>Lista con estilo</h1>
+            <li>Texto1</li>
+            <li>Texto2</li>
+            <li>Texto3</li>
+        </ul>
+        <button id="tipo1">Tipo 1</button>
+        <button id="tipo2">Tipo 2</button>
+        <button id="tipo3">Tipo 3</button>
+        <button id="tipo4">Tipo 4</button>
+
+        <script>
+            document.getElementById("tipo1").onclick=function(){
+                document.getElementById("miLista").className="claseLista1";
+            }
+
+            document.getElementById("tipo2").onclick=function(){
+                document.getElementById("miLista").className="claseLista2";
+            }
+
+            document.getElementById("tipo3").onclick=function(){
+                document.getElementById("miLista").className="claseLista3";
+            }
+
+            document.getElementById("tipo4").onclick=function(){
+                document.getElementById("miLista").className="claseLista4";
+            }
+        </script>
+    </body>
+</html>
