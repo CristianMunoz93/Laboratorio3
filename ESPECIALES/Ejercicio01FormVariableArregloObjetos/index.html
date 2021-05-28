@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../familia.js" type="text/javascript"></script>
+        <script src="script.js" type="text/javascript"></script>
+        <title>Form variable arreglo objetos</title>
+        <style>
+            *{
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+            }
+            #divCabecera{
+                background-color: gray;
+                text-align: center;
+                height: 10%;
+                font-size: 1.1rem;
+                padding-top: 1%;
+            }
+
+            .divPrincipal{
+                background-color: darkkhaki;
+                height: 80%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 33.3% 33.3% 33.3%;
+                padding-top:1%;
+            }
+
+            #divFooter{
+                background-color: gray;
+                text-align: center;
+                height: 10%;
+                font-size: 1.5rem;
+                padding-top: 1%;
+            }
+
+            .divInputs{
+                width: 100%;
+                height: 100%;
+                font-size: 2rem;
+                padding-left: 5%;
+            }
+
+            input,select,button{
+                height: 25%;
+                width: 60%;
+                font-size: 2rem;
+            }
+
+            label{
+                display: block;
+                margin-bottom: 1%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header id="divCabecera">
+            <h1>Formulario para ALTA - Maestro de Articulos</h1>
+        </header>
+        <form id="miFormulario" class="divPrincipal">
+            
+            <div class="divInputs">
+                <label>codArt:</label>
+                <input type="text"  name="codigoArticulo">
+            </div>
+
+            <div class="divInputs">
+                <label>Familia de artículo:</label>
+                <select id="formFamilia" name="formFamilia">
+                    
+                </select>
+            </div>
+
+            <div class="divInputs">
+                <label>Descripción:</label>
+                <input type="text" name="descripcion">
+            </div>
+
+            <div class="divInputs">
+                <label>Fecha Alta:</label>
+                <input type="date" name="fecAlta">
+            </div>
+
+            <div class="divInputs">
+                <label>Saldo stock:</label>
+                <input type="number" name="saldo">
+            </div>
+            
+            <div class="divInputs">
+                <button id="enviar">ENVIAR</button>
+            </div>
+            
+        </form>
+        <footer id="divFooter">
+            <h2>Pie del Formulario</h2>
+        </footer>
+    </body>
+</html>
