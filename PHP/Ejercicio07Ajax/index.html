@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="jquery.js" type="text/javascript"></script>
+        <title>Ajax</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            html,body{
+                height: 100%;
+                width: 100%;
+            }
+
+            #divContenedor{
+                background-color: cadetblue;
+                height: 80%;
+                width: 90%;
+                margin: auto;
+                display: flex;
+            }
+
+            #divInput{
+                background-color: gray;
+                width: 33%;
+                height: 50%;
+            }
+
+            #divBoton{
+                background-color: blue;
+                color: white;
+                width: 33%;
+                height: 50%;
+            }
+
+            #divResultado{
+                background-color: yellow;
+                width: 33%;
+                height: 50%;
+            }
+
+            #divEstado{
+                background-color: grey;
+                width: 30%;
+                height: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divContenedor">
+            <div id="divInput">
+                <h2>Datos de entrada:</h2>
+                <input type="text" name="clave" id="clave">
+            </div>
+            <div id="divBoton">
+                <h2>Encriptar</h2>
+                <button type="submit" id="botonDisparador">Enviar</button>
+            </div>
+            <div id="divResultado">
+                <h1>Resultado:</h1>
+            </div>
+            <div id="divEstado">
+                <h2>Estado del requerimiento:</h2>
+            </div>
+        </div>
+        <script>
+            $("#botonDisparador").click(function () {
+                $("#divResultado").empty(); //vacia el cuadro de Resultado
+                $("#divResultado").addClass("estiloRecibiendo"); // cambia de estilo provisoriamente al contenedor
+                $("#divResultado").html("<h2>Esperando respuesta..</h2>");//Escribe mensaje provisorio
+                $("#divEstado").empty(); // Vacía el div que indica el estado del requerimiento
+                $("#divEstado").append("<h2>Estado del requerimiento:</h2>");//Adiciona html al div de estado
+                
+                console.log("Antes de entrar a Ajax");
+
+                $.ajax({
+                    type:"post",
+                    url:"respuesta.php",
+                    data: {clave: $("#clave").val()},
+
+                    success: function(respuestaDelServer,estado){
+                        $("#divResultado").removeClass("estiloRecibiendo");
+                        $("#divResultado").html("<h1>Resultado:</h1><h4>"+respuestaDelServer+"</h4>");
+                        $("#divEstado").append("<h2>"+estado+"</h2>");
+                    }
+                });
+                console.log("Después de entrar a Ajax");
+            });
+        </script>
+    </body>
+</html>
